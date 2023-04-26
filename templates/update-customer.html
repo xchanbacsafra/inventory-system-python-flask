@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>Update Customer</title>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Dashboard</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="/customers/">Customers</a></li>
+            <li class="breadcrumb-item active">Update Customer</li>
+        </ol>
+        <div class="card mb-4">
+
+            <div class="card-header">Update Customer</div>
+            <div class="card-body">
+                <form action="/update-location/{{customer.customer_id}}" method="POST" id="customer_form">
+                    <label for="customer_name" class="col-form-label">Customer's Name</label>
+                    <input type="text" name="customer_name" id="customer_name" value="{{customer.customer_id}}">
+                    <input id="submitCustomer" value="Update" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
